@@ -77,4 +77,34 @@ var Engine = function () {
         }
         return false;
     };
+
+    this.playerOne_takeBall = function(i,j) {
+        grid[i][j] = "NULLP1";
+    };
+
+    this.countGrid = function() {
+        var count = 0;
+        for(var i = 0; i < 6; i++) {
+            for(var j = 0; j < 6; j++) {
+                if(grid[i][j] == "NULLP1" || grid[i][j] == "NULLP2") {
+                    count--;
+                }
+                count++;
+            }
+        }
+        return count;
+    };
+
+    this.playerOne_score = function() {
+        var score = 0;
+        for(var i = 0; i < 6; i++) {
+            for(var j = 0; j < 6; j++) {
+                if(grid[i][j] == "NULLP1") {
+                    score++;
+                }
+            }
+        }
+        return score;
+    };
+
 };
