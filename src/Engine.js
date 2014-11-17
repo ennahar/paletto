@@ -1,5 +1,4 @@
 'use strict';
-
 var Engine = function () {
 
 // private attributes and methods
@@ -48,7 +47,7 @@ var Engine = function () {
         grid[5][3] = "red";
         grid[5][4] = "green";
         grid[5][5] = "black";
-    }
+    };
 
     this.juxta = function() {
         for(var i = 1; i < 5; i++){
@@ -70,5 +69,12 @@ var Engine = function () {
                 }
             }
         }
-    }
+    };
+
+    this.playerOne_choseColor = function(i, j) {
+        if(grid[i][j] === "yellow") {
+            return true;
+        }
+        return false;
+    };
 };
